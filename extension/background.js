@@ -25,6 +25,8 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
         targetTabId: message.tabId,
       });
 
+      console.log('~ streamId:', streamId);
+
       await createOffscreen();
 
       chrome.runtime.sendMessage({
